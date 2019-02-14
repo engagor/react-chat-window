@@ -1,5 +1,5 @@
 /*!
- * react-chat-window v1.2.1
+ * react-chat-window v1.2.2
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -296,7 +296,7 @@ exports.default = Linkify;
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "chat-icon.e0d2b748.svg";
+module.exports = __webpack_require__.p + "chat-icon.f1747a9a.png";
 
 /***/ }),
 /* 6 */
@@ -5656,7 +5656,7 @@ var ActionMessage_ActionMessage = function (_Component) {
 }(external_root_React_commonjs2_react_commonjs_react_amd_react_["Component"]);
 
 /* harmony default export */ var Messages_ActionMessage = (ActionMessage_ActionMessage);
-// EXTERNAL MODULE: ./src/assets/chat-icon.svg
+// EXTERNAL MODULE: ./src/assets/chat-icon.png
 var chat_icon = __webpack_require__(5);
 var chat_icon_default = /*#__PURE__*/__webpack_require__.n(chat_icon);
 

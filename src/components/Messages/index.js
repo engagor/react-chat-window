@@ -4,7 +4,7 @@ import EmojiMessage from './EmojiMessage'
 import FileMessage from './FileMessage'
 import ButtonMessage from './ButtonMessage'
 import ActionMessage from './ActionMessage'
-import chatIconUrl from './../../assets/chat-icon.svg'
+import chatIconUrl from './../../assets/chat-icon.png'
 
 
 class Message extends Component {

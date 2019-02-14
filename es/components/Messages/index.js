@@ -12,7 +12,7 @@ import EmojiMessage from './EmojiMessage';
 import FileMessage from './FileMessage';
 import ButtonMessage from './ButtonMessage';
 import ActionMessage from './ActionMessage';
-import chatIconUrl from './../../assets/chat-icon.svg';
+import chatIconUrl from './../../assets/chat-icon.png';
 
 var Message = function (_Component) {
   _inherits(Message, _Component);
