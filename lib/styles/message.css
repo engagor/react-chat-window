@@ -1,7 +1,7 @@
 .sc-message {
-  width: 300px;
+  width: 330px;
   margin: auto;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   display: flex;
 }
 
@@ -25,34 +25,43 @@
   background-position: center;
   min-width: 30px;
   min-height: 30px;
-  border-radius: 50%;
+  border-radius: 2px;
   align-self: center;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 .sc-message--text {
-  padding: 17px 20px;
+  padding: 5px 15px;
   border-radius: 6px;
   font-weight: 300;
   font-size: 14px;
   line-height: 1.4;
   white-space: pre-wrap;
   -webkit-font-smoothing: subpixel-antialiased;
-  word-wrap: break-word;
-  width: calc(100% - 90px);
+  font-weight: normal;
+}
+
+.sc-message--text::first-letter {
+  text-transform: capitalize;
 }
 
 .sc-message--content.sent .sc-message--text {
   color: white;
-  background-color: #4e8cff;
+  background-color: orange;
   max-width: calc(100% - 120px);
   word-wrap: break-word;
 }
 
 .sc-message--content.received .sc-message--text {
   color: #263238;
-  background-color: #f4f7f9;
+  background-color: #e9f0f5;
   margin-right: 40px;
+}
+
+.sc-message--text.sc-message--action {
+  background: #fff !important;
+  padding: 5px 0;
+  color: #8da1ae !important;
 }
 
 .sc-message--emoji {
@@ -79,6 +88,26 @@
 
 .sc-message--file .sc-user-input--file-icon:hover path {
   fill: rgba(86, 88, 103, 0.3);
+}
+
+.sc-button {
+  width: 100%;
+  font-size: 13px;
+  border-radius: 8px;
+  margin: 5px 0;
+}
+
+.sc-button button {
+  width: 100%;
+  font-size: 13px;
+  background: #a4b4bf;
+  border: none;
+  padding: 0;
+  border-radius: 9px;
+}
+.sc-button button:hover {
+  background: orange;
+  color: #fff;
 }
 
 @media (max-width: 450px) {

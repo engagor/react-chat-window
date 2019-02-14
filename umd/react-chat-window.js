@@ -1,5 +1,5 @@
 /*!
- * react-chat-window v1.2.0
+ * react-chat-window v1.2.1
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -128,13 +128,13 @@ if (false) { var throwOnDirectAccess, isValidElement, REACT_ELEMENT_TYPE; } else
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "close-icon.c30463a5.png";
+module.exports = __webpack_require__.p + "close-icon.3f8551a7.png";
 
 /***/ }),
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "logo-no-bg.7718b3e3.svg";
+module.exports = __webpack_require__.p + "logo-no-bg.ab131fd8.png";
 
 /***/ }),
 /* 4 */
@@ -6311,7 +6311,7 @@ ChatWindow_ChatWindow.propTypes = {
 };
 
 /* harmony default export */ var components_ChatWindow = (ChatWindow_ChatWindow);
-// EXTERNAL MODULE: ./src/assets/logo-no-bg.svg
+// EXTERNAL MODULE: ./src/assets/logo-no-bg.png
 var logo_no_bg = __webpack_require__(3);
 var logo_no_bg_default = /*#__PURE__*/__webpack_require__.n(logo_no_bg);
 

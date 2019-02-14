@@ -1,15 +1,17 @@
 .sc-launcher {
   width: 60px;
   height: 60px;
-  background-color: #4e8cff;
+  background-color: #445460;
   background-position: center;
   background-repeat: no-repeat;
   position: fixed;
-  right: 25px;
-  bottom: 25px;
+  right: 20px;
+  bottom: 8px;
   border-radius: 50%;
   box-shadow: none;
   transition: box-shadow 0.2s ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .sc-launcher:before {
@@ -27,8 +29,8 @@
   width: 60px;
   height: 60px;
   position: fixed;
-  right: 25px;
-  bottom: 25px;
+  right: 20px;
+  bottom: 8px;
   transition: opacity 100ms ease-in-out, transform 100ms ease-in-out;
 }
 
@@ -39,9 +41,13 @@
 }
 
 .sc-launcher .sc-open-icon {
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
   opacity: 0;
+}
+
+.sc-launcher.opened {
+  background-color: #00b4d0;
 }
 
 .sc-launcher.opened .sc-open-icon {
@@ -56,10 +62,6 @@
 
 .sc-launcher.opened:before {
   box-shadow: 0px 0px 400px 250px rgba(148, 149, 150, 0.2);
-}
-
-.sc-launcher:hover {
-  box-shadow: 0 0px 27px 1.5px rgba(0,0,0,0.2);
 }
 
 .sc-new-messages-count {

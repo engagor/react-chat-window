@@ -7,7 +7,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import ChatWindow from './ChatWindow';
-import launcherIcon from './../assets/logo-no-bg.svg';
+import launcherIcon from './../assets/logo-no-bg.png';
 import incomingMessageSound from './../assets/sounds/notification.mp3';
 import launcherIconActive from './../assets/close-icon.png';
 
