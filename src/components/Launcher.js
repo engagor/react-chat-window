@@ -28,6 +28,12 @@ class Launcher extends Component {
     audio.play();
   }
 
+  handleButtonClick(button) {
+    if (this.props.onButtonClick !== undefined) {
+      this.props.onButtonClick(button);
+    }
+  }
+
   handleClick() {
     if (this.props.handleClick !== undefined) {
       this.props.handleClick();
@@ -58,6 +64,7 @@ class Launcher extends Component {
           isOpen={isOpen}
           onClose={this.handleClick.bind(this)}
           showEmoji={this.props.showEmoji}
+          onButtonClick={this.handleButtonClick.bind(this)}
         />
       </div>
     );

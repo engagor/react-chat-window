@@ -18,6 +18,10 @@ class ChatWindow extends Component {
       this.props.onFilesSelected(filesList);
     }
 
+    onButtonClick(button) {
+      this.props.onButtonClick(button);
+    }
+
     render() {
       let messageList = this.props.messageList || [];
       let classList = [
@@ -34,6 +38,7 @@ class ChatWindow extends Component {
           <MessageList
             messages={messageList}
             imageUrl={this.props.agentProfile.imageUrl}
+            onButtonClick={this.onButtonClick.bind(this)}
           />
           <UserInput
             onSubmit={this.onUserInputSubmit.bind(this)}
