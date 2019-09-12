@@ -1,5 +1,5 @@
 /*!
- * react-chat-window v1.2.5
+ * react-chat-window v1.2.6
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {

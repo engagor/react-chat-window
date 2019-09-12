@@ -41,7 +41,7 @@
   font-weight: normal;
 }
 
-.sc-message--image {
+.sc-message--image img{
   margin: 10px 0;
   display: block;
   outline: none;

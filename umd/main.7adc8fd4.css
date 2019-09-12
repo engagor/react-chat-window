@@ -1,5 +1,5 @@
 /*!
- * react-chat-window v1.2.5
+ * react-chat-window v1.2.6
  * MIT Licensed
  */
 .sc-emoji-picker {
@@ -355,7 +355,7 @@
   font-weight: normal;
 }
 
-.sc-message--image {
+.sc-message--image img{
   margin: 10px 0;
   display: block;
   outline: none;
@@ -703,4 +703,4 @@
   color: #C1C7CD;
 }
 
-/*# sourceMappingURL=main.3b62d572.css.map*/
+/*# sourceMappingURL=main.7adc8fd4.css.map*/
