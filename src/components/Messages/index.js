@@ -5,7 +5,6 @@ import FileMessage from './FileMessage'
 import ButtonMessage from './ButtonMessage'
 import ActionMessage from './ActionMessage'
 import chatIconUrl from './../../assets/chat-icon.png'
-import ImageMessage from "./ImageMessage";
 
 
 class Message extends Component {
@@ -22,8 +21,6 @@ class Message extends Component {
           return <ButtonMessage onButtonClick={this.props.onButtonClick} {...this.props.message} />
       case 'action':
           return <ActionMessage {...this.props.message} />
-      case 'image':
-        return <ImageMessage {...this.props.message} />
       default:
         console.error(`Attempting to load message with unsupported file type '${type}'`)
     }

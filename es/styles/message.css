@@ -42,8 +42,8 @@
 }
 
 .sc-message--image {
+  margin: 10px 0;
   display: block;
-  border-radius: 6px;
   outline: none;
   width: 200px;
   height: auto;
