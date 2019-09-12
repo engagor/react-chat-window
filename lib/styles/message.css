@@ -41,6 +41,14 @@
   font-weight: normal;
 }
 
+.sc-message--image {
+  margin: 10px 0;
+  display: block;
+  outline: none;
+  width: 200px;
+  height: auto;
+}
+
 .sc-message--text::first-letter {
   text-transform: capitalize;
 }

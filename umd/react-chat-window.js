@@ -1,5 +1,5 @@
 /*!
- * react-chat-window v1.2.2
+ * react-chat-window v1.2.4
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -3702,7 +3702,9 @@ module.exports = function (opts) {
           '\\"(?:(?!' + re.src_ZCc + '|["]).)+\\"|' +
           "\\'(?:(?!" + re.src_ZCc + "|[']).)+\\'|" +
           "\\'(?=" + re.src_pseudo_letter + '|[-]).|' +  // allow `I'm_king` if no pair found
-          '\\.{2,3}[a-zA-Z0-9%/]|' + // github has ... in commit range links. Restrict to
+          '\\.{2,4}[a-zA-Z0-9%/]|' + // github has ... in commit range links,
+                                     // google has .... in links (issue #66)
+                                     // Restrict to
                                      // - english
                                      // - percent-encoded
                                      // - parts of file path
@@ -3720,9 +3722,11 @@ module.exports = function (opts) {
       '|\\/' +
     ')?';
 
+  // Allow anything in markdown spec, forbid quote (") at the first position
+  // because emails enclosed in quotes are far more common
   re.src_email_name =
 
-    '[\\-;:&=\\+\\$,\\"\\.a-zA-Z0-9_]+';
+    '[\\-;:&=\\+\\$,\\.a-zA-Z0-9_][\\-;:&=\\+\\$,\\"\\.a-zA-Z0-9_]*';
 
   re.src_xn =
 
@@ -3802,7 +3806,8 @@ module.exports = function (opts) {
 
   re.tpl_email_fuzzy =
 
-      '(^|' + text_separators + '|\\(|' + re.src_ZCc + ')(' + re.src_email_name + '@' + re.tpl_host_fuzzy_strict + ')';
+      '(^|' + text_separators + '|"|\\(|' + re.src_ZCc + ')' +
+      '(' + re.src_email_name + '@' + re.tpl_host_fuzzy_strict + ')';
 
   re.tpl_link_fuzzy =
       // Fuzzy link can't be prepended with .:/\- and non punctuation.
@@ -5469,11 +5474,31 @@ var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 var Linkify = __webpack_require__(4);
 var Linkify_default = /*#__PURE__*/__webpack_require__.n(Linkify);
 
+// CONCATENATED MODULE: ./src/components/Messages/ImageMessage.js
+
+
+var ImageMessage_ImageMessage = function ImageMessage(props) {
+    return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+        'a',
+        { className: 'sc-message--image', href: props.url, target: '_blank', rel: 'noopener noreferrer' },
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement('img', { src: props.url, alt: 'image' })
+    );
+};
+
+/* harmony default export */ var Messages_ImageMessage = (ImageMessage_ImageMessage);
 // CONCATENATED MODULE: ./src/components/Messages/TextMessage.js
 
 
 
+
 var TextMessage_TextMessage = function TextMessage(props) {
+  var images = void 0;
+  if (props.data.images && props.data.images.length > 0) {
+    images = props.data.images.map(function (imageUrl) {
+      return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Messages_ImageMessage, { url: imageUrl });
+    });
+  }
+
   return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
     'div',
     { className: 'sc-message--text' },
@@ -5481,7 +5506,8 @@ var TextMessage_TextMessage = function TextMessage(props) {
       Linkify_default.a,
       { properties: { target: '_blank' } },
       props.data.text
-    )
+    ),
+    images
   );
 };
 

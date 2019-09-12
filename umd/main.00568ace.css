@@ -1,5 +1,5 @@
 /*!
- * react-chat-window v1.2.2
+ * react-chat-window v1.2.4
  * MIT Licensed
  */
 .sc-emoji-picker {
@@ -355,6 +355,14 @@
   font-weight: normal;
 }
 
+.sc-message--image {
+  margin: 10px 0;
+  display: block;
+  outline: none;
+  width: 200px;
+  height: auto;
+}
+
 .sc-message--text::first-letter {
   text-transform: capitalize;
 }
@@ -431,6 +439,7 @@
     width: 80%;
   }
 }
+
 .sc-user-input {
   min-height: 55px;
   margin: 0px;
@@ -682,6 +691,10 @@
   color: #C1C7CD;
 }
 
+.sc-popup-window--search::-moz-placeholder {
+  color: #C1C7CD;
+}
+
 .sc-popup-window--search::-ms-input-placeholder {
   color: #C1C7CD;
 }
@@ -689,5 +702,3 @@
 .sc-popup-window--search::placeholder {
   color: #C1C7CD;
 }
-
-/*# sourceMappingURL=main.fd9af529.css.map*/
